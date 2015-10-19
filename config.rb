@@ -19,6 +19,7 @@ after_configuration do
 end
 
 ignore 'javascripts/components/*.jsx'
+
 configure :development do
   activate :livereload
 end
