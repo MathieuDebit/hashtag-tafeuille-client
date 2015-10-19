@@ -1,0 +1,61 @@
+#player
+  position: relative
+  width: 25%
+  padding: 0 20px 20px
+
+  .avatar
+    position: relative
+    img
+      width: 100%
+      border-radius: 5px
+    span
+      position: absolute
+      border-radius: 5px
+      left: 50%
+      bottom: -10px
+      -webkit-transform: translateX(-50%)
+      -ms-transform: translateX(-50%)
+      transform: translateX(-50%)
+      height: 40px
+      line-height: 40px
+      width: 80%
+      background: #fff
+      text-align: center
+
+  .twitter
+    margin: 20px 0
+    text-align: center
+    font-size: 14px
+
+  .points
+    position: relative
+    display: block
+    margin: 1em 0
+    font-size: 3em
+    text-align: center
+
+  .button
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-size: 20px
+    padding: 15px
+    background: gray
+    color: #fff
+    border-radius: 5px
+
+#player.player-blue
+  .avatar span
+    color: #3498db
+  .points
+    color: #3498db
+  .button
+    background: #3498db
+
+#player.player-red
+  .avatar span
+    color: #e53935
+  .points
+    color: #e53935
+  .button
+    background: #e53935
