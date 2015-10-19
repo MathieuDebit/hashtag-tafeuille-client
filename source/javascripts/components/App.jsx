@@ -59,6 +59,8 @@ class App extends React.Component {
       <div>
         <Countdown timer={this.state.timer}/>
 
+        <Scoreboard blueCount={this.state.blueCount} redCount={this.state.redCount}/>
+
         <div className='flex-bottom'>
           <Player team='red' player={players[0]}/>
 
