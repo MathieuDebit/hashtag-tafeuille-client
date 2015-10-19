@@ -60,12 +60,11 @@ class App extends React.Component {
         <Countdown timer={this.state.timer}/>
 
         <div className='flex-bottom'>
-          <Player team='red' playerCount={this.state.redCount} player={players[0]}/>
+          <Player team='red' player={players[0]}/>
 
-          <Feed tweets={this.state.tweets}
-                  totalCount={this.state.tweets.length}/>
+          <Feed tweets={this.state.tweets} totalCount={this.state.tweets.length}/>
 
-          <Player team='blue' playerCount={this.state.blueCount} player={players[1]}/>
+          <Player team='blue' player={players[1]}/>
         </div>
       </div>
     );

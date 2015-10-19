@@ -15,8 +15,6 @@ class Player extends React.Component {
           <span>@{player.screenname}</span>
         </div>
 
-        <span className='points'>{this.props.playerCount}</span>
-
         <p className='button'>Vote ou RT avec #TaFeuille{this.team()}</p>
       </section>
     );
