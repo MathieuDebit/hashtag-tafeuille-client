@@ -41,11 +41,11 @@ class App extends React.Component {
 
     updated.unshift(tweet);
 
-    if (tweet.blueKeyword) {
+    if (tweet.blueKeyword && this.state.timer > 0) {
       this.setState({blueCount: this.state.blueCount + 1});
     }
 
-    if (tweet.redKeyword) {
+    if (tweet.redKeyword && this.state.timer > 0) {
       this.setState({redCount: this.state.redCount + 1});
     }
 
@@ -59,7 +59,7 @@ class App extends React.Component {
       <div>
         <Countdown timer={this.state.timer}/>
 
-        <Scoreboard blueCount={this.state.blueCount} redCount={this.state.redCount}/>
+        <Scoreboard timer={this.state.timer} blueCount={this.state.blueCount} redCount={this.state.redCount}/>
 
         <div className='flex-bottom'>
           <Player team='red' player={players[0]}/>
