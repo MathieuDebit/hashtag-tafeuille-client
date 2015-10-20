@@ -64,7 +64,7 @@ class App extends React.Component {
         <div className='flex-bottom'>
           <Player team='red' player={players[0]}/>
 
-          <Feed tweets={this.state.tweets} totalCount={this.state.tweets.length}/>
+          <Feed tweets={this.state.tweets} />
 
           <Player team='blue' player={players[1]}/>
         </div>

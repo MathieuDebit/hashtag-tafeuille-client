@@ -10,7 +10,6 @@ class Feed extends React.Component {
 
     return (
       <div id='feed'>
-        <h2>{this.props.totalCount}</h2>
         <ul>{content}</ul>
       </div>
     )
