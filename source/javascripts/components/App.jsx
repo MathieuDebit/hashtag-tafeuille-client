@@ -26,11 +26,9 @@ class App extends React.Component {
     var socket = io.connect('http://localhost:8080');
 
     socket.on('tweet', function (tweet) {
-      socket.on('timer', function (timer) {
-        if (timer > 0) {
-          self.addTweet(tweet);
-        }
-      });
+      if (self.state.timer > 0) {
+        self.addTweet(tweet);
+      }
     });
 
     socket.on('timer', function (data) {
