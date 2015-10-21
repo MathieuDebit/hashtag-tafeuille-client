@@ -1,52 +1,131 @@
-#player
-  position: fixed
-  width: 25%
-  padding: 0 20px 20px
-  z-index: 200
+// #player
+//   position: fixed
+//   width: 25%
+//   padding: 0 20px 20px
+//   z-index: 200
+//
+//   .avatar
+//     position: relative
+//     img
+//       width: 100%
+//       border-radius: 5px
+//     span
+//       position: absolute
+//       border-radius: 5px
+//       left: 50%
+//       bottom: -10px
+//       -webkit-transform: translateX(-50%)
+//       -ms-transform: translateX(-50%)
+//       transform: translateX(-50%)
+//       height: 40px
+//       line-height: 40px
+//       width: 80%
+//       background: #fff
+//       text-align: center
+//
+//   .twitter
+//     margin: 20px 0
+//     text-align: center
+//     font-size: 14px
+//
+//   .button
+//     text-align: center
+//     text-transform: uppercase
+//     letter-spacing: 1px
+//     font-size: 20px
+//     padding: 15px
+//     background: gray
+//     color: #fff
+//     border-radius: 5px
+//
+// #player.player-blue
+//   .avatar span
+//     color: $blue
+//   .button
+//     background: $blue
+//
+// #player.player-red
+//   left: 0
+//   .avatar span
+//     color: $red
+//   .button
+//     background: $red
+//
+//
+// $b: #00abc4
+// $n: #17161C
+// $w: #fff
+// $r: #f13835
+// body
+// 	font-family: sans-serif
+//
+// header
+// 	display: flex
+// 	justify-content: center
+// 	align-items: center
+// .profile
+// 	display: flex
+// 	align-items: center
+// 	.avatar
+// 		height: 120px
+// .black
+// 	text-align: right
+// 	flex-direction: row-reverse
+//
+// .countdown
+// 	border: 1px solid $b
+// 	background: rgba($b, 0.6)
+// 	color: $w
+// 	font-size: 38px
+// 	font-weight: bold
+// 	letter-spacing: 3px
+// 	padding: 15px 20px
+// 	border-radius: 5px
+// 	position: relative
+// 	&:before
+// 		position: absolute
+// 		background: #000
+// 		width: 200px
+// 		height: 200px
+// 		content: ''
+// 		display: block
+// 		z-index: -1
+// 		top: 50%
+// 		left: 50%
+// 		transform: translateY(-50%) translateX(-50%)
+// 	&:after
+// 		position: absolute
+// 		content: 'vs'
+// 		bottom: -13px
+// 		left: 50%
+// 		transform: translateX(-50%)
+// 		color: $n
+// 		font-size: 24px
 
-  .avatar
-    position: relative
-    img
-      width: 100%
-      border-radius: 5px
-    span
-      position: absolute
-      border-radius: 5px
-      left: 50%
-      bottom: -10px
-      -webkit-transform: translateX(-50%)
-      -ms-transform: translateX(-50%)
-      transform: translateX(-50%)
-      height: 40px
-      line-height: 40px
-      width: 80%
-      background: #fff
-      text-align: center
-
-  .twitter
-    margin: 20px 0
-    text-align: center
-    font-size: 14px
-
-  .button
-    text-align: center
-    text-transform: uppercase
-    letter-spacing: 1px
-    font-size: 20px
-    padding: 15px
-    background: gray
-    color: #fff
-    border-radius: 5px
-
-#player.player-blue
-  .avatar span
-    color: $blue
-  .button
-    background: $blue
-
-#player.player-red
-  left: 0
-  .avatar span
-    color: $red
-  .button
-    background: $red
+.profile
+	.avatar
+		border-radius: 5px
+		margin-top: 10px
+		border: 3px solid
+	.infos
+		width: 200px
+		padding: 10px
+		.name
+			text-transform: uppercase
+			font-weight: bold
+			letter-spacing: 1px
+		.twitter
+			font-size: 14px
+			font-weight: lighter
+			line-height: 20px
+.blue
+	.avatar
+		border-color: $b
+	.infos
+		background: linear-gradient(to left, lighten($b, 10%) 0%, $b 100%)
+.black
+	.avatar
+		border-color: $n
+	.infos
+		color: $w
+		background: linear-gradient(to right, lighten($n, 10%) 0%, $n 100%)
