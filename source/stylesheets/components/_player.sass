@@ -1,52 +1,54 @@
-#player
-  position: fixed
-  width: 25%
-  padding: 0 20px 20px
-  z-index: 200
+.profile
+  display: flex
+  align-items: center
+  justify-content: center
+  .avatar
+    border-radius: 5px
+    border: 3px solid
+    height: 130px
+  .infos
+    width: 200px
+    padding: 10px
+    .name
+      text-transform: uppercase
+      font-weight: bold
+      letter-spacing: 1px
+    .twitter
+      font-size: 14px
+      font-weight: lighter
+      line-height: 20px
+.blue
+  .avatar
+    border-color: $blue
+  .infos
+    background: linear-gradient(to left, lighten($blue, 5%) 0%, $blue 100%)
+    border: 1px solid lighten($blue, 10%)
+    border-left: none
+  .vote
+    background: $blue
+    border: 1px solid lighten($blue, 10%)
+
+.black
+  flex-direction: row-reverse
+  text-align: right
 
   .avatar
-    position: relative
-    img
-      width: 100%
-      border-radius: 5px
-    span
-      position: absolute
-      border-radius: 5px
-      left: 50%
-      bottom: -10px
-      -webkit-transform: translateX(-50%)
-      -ms-transform: translateX(-50%)
-      transform: translateX(-50%)
-      height: 40px
-      line-height: 40px
-      width: 80%
-      background: #fff
-      text-align: center
+    border-color: $black
+  .infos
+    background: linear-gradient(to right, lighten($black, 10%) 0%, $black 100%)
+    border: 1px solid lighten($black, 10%)
+    border-right: none
+  .vote
+    background: $black
+    border: 1px solid lighten($black, 10%)
 
-  .twitter
-    margin: 20px 0
-    text-align: center
-    font-size: 14px
-
-  .button
-    text-align: center
-    text-transform: uppercase
-    letter-spacing: 1px
-    font-size: 20px
-    padding: 15px
-    background: gray
-    color: #fff
-    border-radius: 5px
-
-#player.player-blue
-  .avatar span
-    color: $blue
-  .button
-    background: $blue
-
-#player.player-red
-  left: 0
-  .avatar span
-    color: $red
-  .button
-    background: $red
+p.vote
+  text-align: center
+  line-height: 20px
+  width: 171px
+  font-weight: lighter
+  letter-spacing: 1px
+  padding: 10px
+  border-radius: 5px
+  .bold
+    font-weight: bold

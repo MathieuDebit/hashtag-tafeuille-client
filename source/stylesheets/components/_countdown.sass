@@ -1,10 +1,29 @@
 #countdown
-  position: fixed
-  width: 100%
-  height: 20vh
-  line-height: 20vh
-  text-align: center
-  font-size: 60px
-  letter-spacing: 5px
-  background: #eee
-  z-index: 100
+  position: relative
+  p
+    padding: 15px 20px
+    font-size: 32px
+    border: 2px solid
+    border-radius: 5px
+    font-weight: bold
+    letter-spacing: 2px
+    position: relative
+    z-index: 1
+    box-shadow: 0 0 15px 10px rgba($black, 0.3)
+    background: rgba($black, 0.5)
+    &:after
+      content: 'vs'
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%) translateY(-110%)
+      font-size: 26px
+.logo
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  z-index: 0
+  opacity: 0.7
+  img
+    width: 200px
