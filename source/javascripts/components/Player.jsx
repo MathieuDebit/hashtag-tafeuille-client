@@ -5,28 +5,27 @@ class Player extends React.Component {
     var player = this.props.player;
 
     return (
-      <section id='player' className={'player-' + this.props.team}>
-        <div className='avatar'>
-          <img src={player.avatar} />
-          <span>{player.name}</span>
+      <div className={'profile ' + this.props.team}>
+        <div>
+          <img className='avatar' src={player.avatar}/>
+          <p className="vote">Votez avec <span className="bold">#tafeuille{this.team()}</span></p>
         </div>
 
-        <div className='twitter'>
-          <span>@{player.screenname}</span>
+        <div className="infos">
+          <p className="name">{player.name}</p>
+          <p className="twitter">{player.screenname}</p>
         </div>
-
-        <p className='button'>Vote ou RT avec #TaFeuille{this.team()}</p>
-      </section>
+      </div>
     );
   }
 
-  team(){
+  team() {
     var team;
-    if (this.props.team == 'red'){
-      team = 'rouge';
+    if (this.props.team == 'red') {
+      team = 'Noir';
     };
     if (this.props.team == 'blue') {
-      team = 'bleu'
+      team = 'Bleu'
     };
     return team;
   }

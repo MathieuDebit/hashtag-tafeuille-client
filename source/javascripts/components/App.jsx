@@ -23,7 +23,7 @@ class App extends React.Component {
 
   componentDidMount(){
     var self = this;
-    var socket = io.connect('http://localhost:8080');
+    var socket = io.connect('http://localhost:1234');
 
     socket.on('tweet', function (tweet) {
       socket.on('timer', function (timer) {
@@ -61,17 +61,14 @@ class App extends React.Component {
 
     return (
       <div>
-        <Countdown timer={this.state.timer}/>
 
+      <header>
         <Scoreboard timer={this.state.timer} blueCount={this.state.blueCount} redCount={this.state.redCount}/>
-
-        <div className='flex-bottom'>
-          <Player team='red' player={players[0]}/>
-
+        <Player team='blue' player={players[1]}/>
+        <Countdown timer={this.state.timer}/>
+        <Player team='red' player={players[0]}/>
+      </header>
           <Feed tweets={this.state.tweets} />
-
-          <Player team='blue' player={players[1]}/>
-        </div>
       </div>
     );
   }

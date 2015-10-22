@@ -9,15 +9,22 @@ class Scoreboard extends React.Component {
 
   render() {
     if (this.props.timer == 0) {
-      $('#scoreboard').show();
+      // $('#scoreboard').show();
+      $('#scoreboard').addClass('animated fadeInDownBig');
+      $('#overlay').addClass('active');
     }
 
     return (
+      <div>
+
       <section id='scoreboard'>
-        <a className='close' href='#' onClick={this.handleClick.bind(this)}>close</a>
-        <p>{this.props.blueCount} points !</p>
-        <p>{this.props.redCount} points !</p>
+        <h1>Le public à voté !</h1>
+        <h2>#tafeuilleBleu : <span className="bleu">{this.props.blueCount} voix</span></h2>
+        <h2>#tafeuilleNoir : <span className="noir">{this.props.redCount} voix</span></h2>
+
       </section>
+          <div id='overlay'></div>
+      </div>
     );
   }
 }

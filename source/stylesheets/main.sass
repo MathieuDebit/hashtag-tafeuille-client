@@ -18,6 +18,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body
   line-height: 1
+  overflow: hidden
 
 ol, ul
   list-style: none
@@ -37,30 +38,18 @@ body
   background: #eee
   font-family: Roboto, sans-serif
   height: 100vh
-
+  background: url(../../image/bg.jpg)
+  background-size: contain
 a
   color: inherit
 
-.flex-bottom
-  padding-top: 150px
-  height: 80vh
-  display: -webkit-box
-  display: -webkit-flex
-  display: -ms-flexbox
+header
+  overflow: hidden
   display: flex
-  -webkit-box-orient: horizontal
-  -webkit-box-direction: normal
-  -webkit-flex-direction: row
-  -ms-flex-direction: row
-  flex-direction: row
-  -webkit-flex-wrap: nowrap
-  -ms-flex-wrap: nowrap
-  flex-wrap: nowrap
-  -webkit-box-pack: center
-  -webkit-justify-content: center
-  -ms-flex-pack: center
+  align-items: center
   justify-content: center
-  -webkit-box-align: bottom
-  -webkit-align-items: bottom
-  -ms-flex-align: bottom
-  align-items: bottom
+  background: rgba(#000, 0.8)
+  border-bottom: 2px solid $b
+  padding: 15px 0
+  color: $w
+  background-position: 0 0
