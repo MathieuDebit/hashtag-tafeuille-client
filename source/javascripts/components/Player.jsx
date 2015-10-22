@@ -21,7 +21,7 @@ class Player extends React.Component {
 
   team() {
     var team;
-    if (this.props.team == 'red') {
+    if (this.props.team == 'black') {
       team = 'Noir';
     };
     if (this.props.team == 'blue') {

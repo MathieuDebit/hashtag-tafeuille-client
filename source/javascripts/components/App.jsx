@@ -12,7 +12,7 @@ class App extends React.Component {
       skip: 0,
       done: false,
       blueCount: 0,
-      redCount: 0,
+      blackCount: 0,
       timer: 0
     };
   }
@@ -49,8 +49,8 @@ class App extends React.Component {
       this.setState({blueCount: this.state.blueCount + 1});
     }
 
-    if (tweet.redKeyword && this.state.timer > 0) {
-      this.setState({redCount: this.state.redCount + 1});
+    if (tweet.blackKeyword && this.state.timer > 0) {
+      this.setState({blackCount: this.state.blackCount + 1});
     }
 
     this.setState({tweets: updated, count: count, skip: skip});
@@ -63,10 +63,10 @@ class App extends React.Component {
       <div>
 
       <header>
-        <Scoreboard timer={this.state.timer} blueCount={this.state.blueCount} redCount={this.state.redCount}/>
+        <Scoreboard timer={this.state.timer} blueCount={this.state.blueCount} blackCount={this.state.blackCount}/>
         <Player team='blue' player={players[1]}/>
         <Countdown timer={this.state.timer}/>
-        <Player team='red' player={players[0]}/>
+        <Player team='black' player={players[0]}/>
       </header>
           <Feed tweets={this.state.tweets} />
       </div>
