@@ -23,7 +23,7 @@ class App extends React.Component {
 
   componentDidMount(){
     var self = this;
-    var socket = io.connect('http://localhost:1234');
+    var socket = io.connect('http://localhost:8080');
 
     socket.on('tweet', function (tweet) {
       socket.on('timer', function (timer) {
