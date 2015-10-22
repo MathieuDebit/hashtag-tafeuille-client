@@ -9,7 +9,6 @@ class Scoreboard extends React.Component {
 
   render() {
     if (this.props.timer == 0) {
-      // $('#scoreboard').show();
       $('#scoreboard').addClass('animated fadeInDownBig');
       $('#overlay').addClass('active');
     }
