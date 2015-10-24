@@ -7,7 +7,7 @@ class Player extends React.Component {
     return (
       <div className={'profile ' + this.props.team}>
         <div>
-          <img className='avatar' src={player.avatar}/>
+          <img className='avatar' src={'/image/players/' + player.avatar}/>
           <p className="vote">Votez avec <span className="bold">#tafeuille{this.team()}</span></p>
         </div>
 

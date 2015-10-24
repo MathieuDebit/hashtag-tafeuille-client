@@ -56,15 +56,17 @@ class App extends React.Component {
 
   render() {
     var players = this.props.players;
+    var player1 = players[0];
+    var player2 = players[0];
 
     return (
       <div>
 
       <header>
         <Scoreboard timer={this.state.timer} blueCount={this.state.blueCount} blackCount={this.state.blackCount}/>
-        <Player team='blue' player={players[1]}/>
+        <Player team='blue' player={player1}/>
         <Countdown timer={this.state.timer}/>
-        <Player team='black' player={players[0]}/>
+        <Player team='black' player={player2}/>
       </header>
           <Feed tweets={this.state.tweets} />
       </div>
