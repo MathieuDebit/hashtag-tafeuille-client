@@ -8,7 +8,7 @@ class Player extends React.Component {
       <div className={'profile ' + this.props.team}>
         <div>
           <img className='avatar' src={'/image/players/' + player.avatar}/>
-          <p className="vote">Votez avec <span className="bold">#tafeuille{this.team()}</span></p>
+          <p className="vote">Votez avec <span className="bold">#TaFeuille{this.team()}</span></p>
         </div>
 
         <div className="infos">
@@ -22,10 +22,10 @@ class Player extends React.Component {
   team() {
     var team;
     if (this.props.team == 'black') {
-      team = 'Noir';
+      team = 'Noire';
     };
     if (this.props.team == 'blue') {
-      team = 'Bleu'
+      team = 'Bleue'
     };
     return team;
   }

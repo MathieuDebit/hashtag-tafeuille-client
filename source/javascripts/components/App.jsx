@@ -13,7 +13,7 @@ class App extends React.Component {
       done: false,
       blueCount: 0,
       blackCount: 0,
-      timer: 0
+      timer: 300
     };
   }
 
