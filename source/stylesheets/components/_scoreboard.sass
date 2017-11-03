@@ -1,78 +1,36 @@
 #scoreboard
-  padding: 40px 55px
-  min-width: 600px
+  padding: 70px 100px
+  background: white
+  border-radius: 10px
   position: absolute
+  text-align: center
   top: 50%
   left: 50%
-  transform: translateY(-50%) translateX(-50%)
-  text-align: center
-  background: #fff
-  color: $black
-  border: 1px solid  $black
+  transform: translate(-50%, -50%)
   z-index: 3
-  transition: opacity 200ms
-  border-radius: 5px
-  opacity: 0
+  box-shadow: 0 22px 44px rgba(black, 0.4)
   h1
-    text-transform: uppercase
-    letter-spacing: 2px
-    font-size: 55px
-    margin-bottom: 10px
-    font-weight: bold
+    margin-bottom: 30px
   h2
-    font-size: 40px
-    line-height: 60px
+    font-weight: normal
+    margin-bottom: 20px
+  .score
+    font-weight: bold
   .bleu
-    color: $blue
-    font-weight: bold
+    padding: 5px 10px
+    border-radius: 20px
+    background: $rose
   .noir
-    color: $black
-    font-weight: bold
-#overlay
+    padding: 5px 10px
+    border-radius: 20px
+    background: $jaune
+.overlay
   position: absolute
-  z-index: 2
-  top: 0
-  left: 0
   width: 100%
   height: 100%
-  background: rgba(#000, 0)
-  transition: background 250ms
+  background: rgba(black, 0.4)
+  z-index: 2
+  opacity: 0
+  transition: opacity 250ms ease-in
 .active
-  background: rgba(#000, 0.8)!important
-
-.animated
-  -webkit-animation-duration: 1s
-  animation-duration: 1s
-  -webkit-animation-fill-mode: both
-  animation-fill-mode: both
-  &.bounceIn, &.bounceOut
-    -webkit-animation-duration: .1s
-    animation-duration: .1s
-
-@-webkit-keyframes fadeInDownBig
-  from
-    opacity: 0
-    -webkit-transform: translate3d(0, -2000px, 0) translateY(-50%) translateX(-50%)
-    transform: translate3d(0, -2000px, 0) translateY(-50%) translateX(-50%)
-
-  to
-    opacity: 1
-    -webkit-transform:  translateY(-50%) translateX(-50%)
-    transform:  translateY(-50%) translateX(-50%)
-
-
-@keyframes fadeInDownBig
-  from
-    opacity: 0
-    -webkit-transform: translate3d(0, -2000px, 0) translateY(-50%) translateX(-50%)
-    transform: translate3d(0, -2000px, 0) translateY(-50%) translateX(-50%)
-
-  to
-    opacity: 1
-    -webkit-transform:  translateY(-50%) translateX(-50%)
-    transform:  translateY(-50%) translateX(-50%)
-
-
-.fadeInDownBig
-  -webkit-animation-name: fadeInDownBig
-  animation-name: fadeInDownBig
+  opacity: 1

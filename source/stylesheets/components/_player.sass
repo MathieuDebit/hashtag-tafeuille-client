@@ -1,54 +1,58 @@
+.blue
+  text-align: right
+  background: url(../../image/rose.svg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: bottom left
+  justify-content: flex-end
+  .avatar-content
+    order: 1
+    position: relative
+    .avatar
+      clip-path: url(#jaune)
+      -webkit-clip-path: url(#jaune)
+      width: 136px
+      height: 90px
+    svg
+      position: absolute
+      top: 0
+      left: 0
+
+.black
+  background: url(../../image/jaune.svg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: bottom right
+  justify-content: flex-start
+
+  .avatar-content
+    position: relative
+    .avatar
+      clip-path: url(#rose)
+      -webkit-clip-path: url(#rose)
+      width: 136px
+      height: 90px
+    svg
+      position: absolute
+      top: 0
+      left: 0
 .profile
   display: flex
   align-items: center
-  justify-content: center
+  width: 450px
+  height: 180px
   .avatar
-    border-radius: 5px
-    border: 3px solid
-    height: 130px
+    width: 136px
+    height: 90px
+    margin: 0 20px
   .infos
-    width: 200px
-    padding: 10px
     .name
-      text-transform: uppercase
-      font-weight: bold
+      font-size: 18px
       letter-spacing: 1px
-    .twitter
-      font-size: 14px
-      font-weight: lighter
-      line-height: 20px
-.blue
-  .avatar
-    border-color: $blue
-  .infos
-    background: linear-gradient(to left, lighten($blue, 5%) 0%, $blue 100%)
-    border: 1px solid lighten($blue, 10%)
-    border-left: none
-  .vote
-    background: $blue
-    border: 1px solid lighten($blue, 10%)
-
-.black
-  flex-direction: row-reverse
-  text-align: right
-
-  .avatar
-    border-color: $black
-  .infos
-    background: linear-gradient(to right, lighten($black, 10%) 0%, $black 100%)
-    border: 1px solid lighten($black, 10%)
-    border-right: none
-  .vote
-    background: $black
-    border: 1px solid lighten($black, 10%)
-
-p.vote
-  text-align: center
-  line-height: 20px
-  width: 171px
-  font-weight: lighter
-  letter-spacing: 1px
-  padding: 10px
-  border-radius: 5px
-  .bold
-    font-weight: bold
+      font-weight: bold
+    .vote
+      font-size: 18px
+      letter-spacing: 1px
+      color: rgba(black, .4)
+.bold
+  color: #000

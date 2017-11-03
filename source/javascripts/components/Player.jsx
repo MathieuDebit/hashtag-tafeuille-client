@@ -6,15 +6,38 @@ class Player extends React.Component {
 
     return (
       <div className={'profile ' + this.props.team}>
-        <div>
-          <img className='avatar' src={'/image/players/' + player.avatar}/>
-          <p className="vote">Votez avec <span className="bold">#TaFeuille{this.team()}</span></p>
-        </div>
+          <div className="avatar-content">
+            <img className='avatar' src={'/image/players/' + player.avatar}/>
+              <svg height="0" width="0">
+                  <defs></defs>
+                  <clipPath id="jaune">
+                      <path
+                          fill="#FFFFFF"
+                          stroke="#000000"
+                          d="M58.4435045,3.0253769 C45.0799494,-3.08080176 30.9381952,-0.90452802 23.0622847,11.4232174 C15.1863742,23.7509629 17.5873257,30.0758175 13.1375641,38.6494484 C5.88112771,52.6308731 -11.21707,58.0642161 10.3387312,70.2027342 C15.2954695,72.9939762 20.8666565,74.6139516 26.3696304,76.0553273 C47.0524616,81.4727127 54.2241434,70.5278445 74.6273601,68.3954341 C85.2109346,67.2893084 98.7195342,80.0748371 109.055957,76.0553273 C118.982723,72.1951202 123.852472,49.8447802 116.447506,36.1055428 C109.04254,22.3663054 96.3578962,28.3181859 84.1321216,21.0930108 C71.9063471,13.8678356 71.8070596,9.13155556 58.4435045,3.0253769 Z"
+                          id="mask-jaune"></path>
+                  </clipPath>
+              </svg>
+              <svg height="0" width="0">
+                  <defs></defs>
+                  <clipPath id="rose">
+                      <path
+                          fill="#FFFFFF"
+                          stroke="#000000"
+                          d="M117.83315,23.853522 C113.265927,8.58606275 89.0371978,-5.21163636 76.4383301,1.94319513 C71.5809335,4.70168545 66.7101725,7.66938739 62.1449614,10.8884584 C46.556158,21.8806039 25.2914093,-0.745577897 8.97518595,13.1398686 C-2.02262536,22.4992355 10.2793401,37.6813131 12.314733,45.7101799 C14.3501259,53.7390468 2.98132939,58.3311125 1.01743037,62.5045193 C-6.87875122,79.2843931 33.6412354,61.1535267 38.0154257,62.5045193 C52.7093377,67.0428142 63.6630246,95.0151595 82.9907652,84.6550144 C90.0311724,80.8811828 88.253049,70.7310855 95.2734293,66.9201277 C100.580516,64.039218 118.753571,79.4607286 116.133187,61.4874937 C113.512804,43.5142588 122.400373,39.1209812 117.83315,23.853522 Z"
+                          id="mask-jaune"></path>
+                  </clipPath>
+              </svg>
+
+          </div>
 
         <div className="infos">
           <p className="name">{player.name}</p>
-          <p className="twitter">{player.screenname}</p>
+          <p className="vote">Vote avec <span className="bold">#tafeuille{this.team()}</span></p>
         </div>
+
+
+
       </div>
     );
   }
@@ -22,10 +45,10 @@ class Player extends React.Component {
   team() {
     var team;
     if (this.props.team == 'black') {
-      team = 'Noire';
+      team = 'Jaune';
     };
     if (this.props.team == 'blue') {
-      team = 'Bleue'
+      team = 'Rose'
     };
     return team;
   }

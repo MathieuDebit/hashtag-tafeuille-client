@@ -7,8 +7,8 @@ class Countdown extends React.Component {
 
     return (
       <section id='countdown'>
-        <p>{minutesRemaining} : {secondsRemaining}</p>
-        <div className="logo"><img src="../../image/logo.png"></img></div>
+        <div className="logo"><img src="../../image/logo.jpg"></img></div>
+        <p className="countdown">{minutesRemaining} : {secondsRemaining}</p>
       </section>
     );
   }

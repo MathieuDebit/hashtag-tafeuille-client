@@ -9,10 +9,10 @@ class Tweet extends React.Component {
       <li key={this.props.key} className={'tweet' + (tweet.blueKeyword ? ' teamBlue' : '') + (tweet.blackKeyword ? ' teamBlack' : '')}>
         <img className='avatar' src={tweet.avatar} />
         <span className='text'>
+          <span className='name'>{tweet.author}</span>
           <a href={tweet_url} target='_blank'>
             <span className='screen-name'>@{tweet.screenname}</span>
           </a>
-          <span className='name'>{tweet.author}</span>
           <span className='content'>{tweet.body}</span>
         </span>
       </li>
