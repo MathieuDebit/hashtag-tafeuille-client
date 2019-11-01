@@ -56,8 +56,8 @@ class App extends React.Component {
 
   render() {
     var players = this.props.players;
-    var player1 = players[14];
-    var player2 = players[3];
+    var player1 = players[0];
+    var player2 = players[1];
 
     return (
       <div>
